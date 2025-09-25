@@ -1,0 +1,64 @@
+
+<div class="card-header" style="text-align: center;">
+
+      <div [ngStyle]="{
+      'height':'100vh',
+      'background-image': 'url(' + fondo + ')',
+      'background-size': 'cover',
+      'background-position': 'center'
+    }">
+  <h1 style="color:white; text-align:center;">
+    Cinepolis
+</h1>
+<table border="1" align="center" cellpadding="25">
+  <tr>
+    <td valign="top">
+      <h3 style="color:white;">Entradas</h3>
+      <table>
+        <tr>
+          <td style="color:white;">Nombre:</td>
+          <td><input type="text" [(ngModel)]="nombre"></td>
+        </tr>
+        <tr>
+          <td style="color:white;">Cantidad Compradores:</td>
+          <td><input type="number" [(ngModel)]="compradores"></td>
+        </tr>
+        <tr>
+          <td style="color:white;">Tarjeta Cinéco:</td>
+          <td>
+            <input type="radio" name="cineco" [(ngModel)]="tarjeta" value="si">
+            <span style="color:white;">Sí</span>
+            <br>
+            <input type="radio" name="cineco" [(ngModel)]="tarjeta" value="no">
+            <span style="color:white;">No</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="color:white;">Cantidad de Boletos:</td>
+          <td><input type="number" [(ngModel)]="boletos"></td>
+        </tr>
+      </table>
+    </td>
+
+    <td valign="top">
+      <h3 style="color:white;">Salidas</h3>
+      <table>
+        <tr>
+          <td style="color:white;">Valor a Pagar:</td>
+          <td><input type="text" [value]="valorPagar" readonly></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Acciones -->
+  <tr>
+    <td colspan="2" align="center">
+      <h3 style="color:white;">Acciones</h3>
+      <button (click)="procesar()">Procesar</button>
+      <button (click)="salir()">Salir</button>
+    </td>
+  </tr>
+</table>
+</div>
+    </div>
